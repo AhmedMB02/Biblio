@@ -1,0 +1,81 @@
+.hero {
+  height: 70vh;
+  background: url('/assets/images/bibl.jpg') center/cover no-repeat;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero h1 {
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+.hero p{
+    font-style: italic;
+    font-weight: bold;
+    color: crimson;
+}
+
+.hero .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.hero .btn-primary:hover {
+  opacity: 0.8;
+}
+
+
+/*-----------------Section about--------------- */
+
+.about {
+    padding: 60px 0;
+}
+.about h1{
+    color: #b48b6a;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between; /* texte à gauche / image à droite */
+    align-items: center; /* alignés verticalement */
+    gap: 40px; /* espace entre texte et image */
+}
+
+.about-img {
+  max-width: 520px; /* Taille contrôlée */
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .about-img {
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+/*-----------------Section service--------------- */
+.services h1 {
+  color: #b48b6a;
+  padding-bottom: 40px;
+}
+
+/* Arrondis + Hover */
+.service-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image arrondie en haut */
+.service-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}

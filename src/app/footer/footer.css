@@ -1,0 +1,106 @@
+.footer {
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: var(--bg-color);
+  border-top: 1px solid #6d6a6a;
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: background .4s, border-color .4s;
+}
+
+.container-footer {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Left Zone: Brand + Contact --- */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.contact-info {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.3rem;
+}
+
+.contact-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --- Middle Menu --- */
+.footer-menu {
+  display: grid;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: opacity .3s;
+}
+
+.footer-menu a:hover {
+  opacity: 0.6;
+}
+
+/* --- Right Zone: Social Icons --- */
+.footer-right a {
+  color: var(--text-color);
+  margin-left: 12px;
+  font-size: 1.2rem;
+  transition: opacity .3s, transform .2s;
+}
+
+.footer-right a:hover {
+  opacity: .6;
+  transform: translateY(-1px);
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 600px) {
+  .container-footer {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .footer-menu {
+    justify-content: center;
+  }
+
+  .footer-right {
+    margin-top: 4px;
+  }
+}

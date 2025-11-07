@@ -1,0 +1,33 @@
+/* Titre */
+h2 {
+  color: var(--primary-color);
+  
+}
+
+/* Style de la carte du formulaire */
+form {
+  background: var(--bg-color);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+/* Bouton Envoyer */
+.btn-primary {
+  background-color: #b48b6a;
+  border-color: var(--primary-color) !important;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+/* Focus des inputs & textarea */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(212, 165, 116, 0.35);
+}

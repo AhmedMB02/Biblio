@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #f6efe7;
+  --text-color: #3b3b3b;
+  --primary-color: #b48b6a;
+  --border-color: #d4c8bd;
+
+}
+
+.dark-theme {
+  --bg-color: #1b1b1b;
+  --text-color: #e6e6e6;
+  --primary-color: #d4a574;
+  --border-color: #333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background .4s, color .4s;
+  margin: 20px 50px;
+}
