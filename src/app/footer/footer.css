@@ -3,18 +3,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-
   background: var(--bg-color);
   border-top: 1px solid #6d6a6a;
   padding: 12px 20px;
-
   display: flex;
   justify-content: center;
   z-index: 999;
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   transition: background .4s, border-color .4s;
 }
 

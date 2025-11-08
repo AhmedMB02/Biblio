@@ -79,3 +79,26 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+/*-----------------Section accueil--------------- */
+
+.accueil{
+  border-radius: 15px;
+  margin-top: 40px;
+  background-color:lightblue;
+}
+.accueil h1 {
+  color: #b48b6a;
+  padding-bottom: 40px;
+}
+.accueil-container{
+  display: flex;
+  gap: 50px;
+}
+.container h5{
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.container p{
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
