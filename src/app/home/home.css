@@ -33,16 +33,11 @@
 /*-----------------Section about--------------- */
 
 .about {
-    padding: 60px 0;
+    padding: 60px 60px;
 }
 .about h1{
     color: #b48b6a;
-}
-.about-container {
-    display: flex;
-    justify-content: space-between; /* texte à gauche / image à droite */
-    align-items: center; /* alignés verticalement */
-    gap: 40px; /* espace entre texte et image */
+    padding-bottom: 40px;
 }
 
 .about-img {
@@ -80,25 +75,30 @@
   border-top-right-radius: 15px;
 }
 /*-----------------Section accueil--------------- */
-
-.accueil{
+.accueil {
   border-radius: 15px;
   margin-top: 40px;
-  background-color:lightblue;
+  background-color: lightblue;
+  padding: 40px 20px;
 }
-.accueil h1 {
+.accueil h1{
   color: #b48b6a;
   padding-bottom: 40px;
 }
-.accueil-container{
-  display: flex;
-  gap: 50px;
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
 }
-.container h5{
-  padding-left: 20px;
-  padding-top: 30px;
+
+/* Texte */
+.horaire h5 {
+  color: #b48b6a;
+  margin-bottom: 10px;
 }
-.container p{
-  padding-left: 20px;
+
+.horaire p {
   font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 6px;
 }
