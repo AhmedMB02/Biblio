@@ -1,12 +1,15 @@
-export class Livre{
-    titre! : string;
-    imagesrc! : string;
-    description! : string ;
+export interface Livre{
+    ref: string;
+    titre : string;
+    imagesrc: string;
+    description : string ;
 
-
-    constructor(title: string , imagesrc: string , desc: string){
+/*
+    constructor(ref: string , title: string , imagesrc: string , desc: string){
+        this.ref = ref;
         this.titre = title;
         this.imagesrc =imagesrc;
         this.description = desc;
     }
+        */
 }
