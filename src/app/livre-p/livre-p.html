@@ -1,1 +1,12 @@
-<p>livre-p works!</p>
+<h2>Nos livres</h2>
+
+<div class="row">
+  <div class="col-md-4 mb-4" *ngFor="let livre of books">
+    <app-livre-card
+      [titre]="livre.titre"
+      [description]="livre.description"
+      [imagesrc]="livre.imagesrc"
+      [ref]="livre.ref">
+    </app-livre-card>
+  </div>
+</div>

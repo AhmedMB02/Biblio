@@ -6,7 +6,7 @@ import { LivreCard } from './livre-card/livre-card';
 
 export const routes: Routes = [
     {path : '',component:Home},
-    {path : 'contact',component:LivreCard},
+    {path : 'contact',component:Contact},
     {path : 'livres' , component:LivreP},
 
 ];
