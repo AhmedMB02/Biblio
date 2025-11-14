@@ -1,0 +1,51 @@
+/* --- Conteneur général --- */
+.filters-container {
+  background: #f8f5f1; /* beige clair */
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* --- Barre de recherche --- */
+.search-bar input {
+  width: 100%;
+  padding: 12px 18px;
+  border: 2px solid #e0d5c2;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-bar input:focus {
+  border-color: #c9a776; /* doré */
+  box-shadow: 0 0 6px rgba(201,167,118,0.4);
+}
+
+/* --- Boutons catégories --- */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cat-btn {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  background: #e9dfd1;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.cat-btn:hover {
+  background: #d5c0a7;
+}
+
+.cat-btn.active {
+  background: #c9a776; /* doré */
+  color: white;
+  font-weight: 600;
+}

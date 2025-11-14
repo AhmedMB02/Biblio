@@ -1,12 +1,31 @@
-<h2>Nos livres</h2>
+<div class="filters-container mb-4">
 
-<div class="row">
-  <div class="col-md-4 mb-4" *ngFor="let livre of books">
-    <app-livre-card
-      [titre]="livre.titre"
-      [description]="livre.description"
-      [imagesrc]="livre.imagesrc"
-      [ref]="livre.ref">
-    </app-livre-card>
+  <!-- Barre de recherche -->
+  <div class="search-bar mb-3">
+    <input type="text" placeholder="🔍 Rechercher un livre par nom...">
+  </div>
+
+  <!-- Filtres catégories -->
+  <div class="categories">
+    <button class="cat-btn active">Tous</button>
+    <button class="cat-btn">Roman</button>
+    <button class="cat-btn">Science</button>
+    <button class="cat-btn">Histoire</button>
+    <button class="cat-btn">Enfants</button>
+  </div>
+
+</div>
+
+<div class="container py-4">
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let livre of books">
+      <app-livre-card
+        [titre]="livre.titre"
+        [auteur]="livre.auteur"
+        [description]="livre.description"
+        [imagesrc]="livre.imagesrc"
+        [ref]="livre.ref">
+      </app-livre-card>
+    </div>
   </div>
 </div>

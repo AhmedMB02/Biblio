@@ -1,4 +1,4 @@
-.service-card {
+/* .service-card {
   border-radius: 14px;
   overflow: hidden;
   border: none;
@@ -31,5 +31,58 @@
 }
 
 .service-card .card-link:hover {
+  text-decoration: underline;
+} */
+
+
+/* Style général de la card */
+.service-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animation hover */
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.livre-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Titre */
+.card-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4a3f35;
+}
+
+/* Textes */
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Référence */
+.list-group-item {
+  background-color: #fafafa;
+  font-size: 0.9rem;
+}
+
+/* Lien "en savoir plus" */
+.card-link {
+  color: #b48b6a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-link:hover {
   text-decoration: underline;
 }

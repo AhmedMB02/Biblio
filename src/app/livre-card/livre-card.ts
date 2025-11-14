@@ -12,6 +12,7 @@ export class LivreCard {
 
   @Input() titre!: string;
   @Input() description!: string;
+  @Input() auteur!: string;
   @Input() imagesrc!: string;
   @Input() ref!: string;
 
