@@ -106,3 +106,26 @@
   font-family: 'Times New Roman', Times, serif;
   margin-bottom: 6px;
 }
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.btn-see-more {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color .3s;
+}
+
+.btn-see-more:hover {
+  color: #a77a57;
+}
+
+.home-section {
+  margin-top: 30px;
+}
+

@@ -21,10 +21,30 @@
       </p>
     </div>
     <div class="col-md-5 ">
-      <img src="assets/images/biblio.jpg" alt="apropos" class="about-img img-fluid">
+      <img src="assets/images/bibl.jpg" alt="apropos" class="about-img img-fluid">
     </div>
   </div>
 </section>
+
+
+<section class="services container py-5">
+  <h1 class="text-center mb-4">Derniers livres ajoutés</h1>
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let livre of randomBooks">
+
+      <div class="book-card h-100 shadow-sm">
+        <img [src]="livre.imagesrc" class="book-img">
+        <div class="p-3">
+          <h5 class="book-title">{{ livre.titre }}</h5>
+          <p class="book-desc">{{ livre.description }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <section class="services container py-5">
   <h1 class="text-center mb-4">Nos services</h1>
