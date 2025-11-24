@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLinkActive } from "@angular/router";
+import { Router, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +9,9 @@ import { RouterLinkActive } from "@angular/router";
 })
 export class Footer {
 
+  constructor(private router: Router){}
+
+  goToAdmin() {
+    this.router.navigate(['/admin-login']);
+  }
 }

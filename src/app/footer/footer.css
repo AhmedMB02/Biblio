@@ -1,102 +1,60 @@
 .footer {
-
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--bg-color);
-  border-top: 1px solid #6d6a6a;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: center;
-  z-index: 999;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background .4s, border-color .4s;
-}
-
-.container-footer {
-  width: 100%;
-  max-width: 1200px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* --- Left Zone: Brand + Contact --- */
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  max-width: 260px;
-}
-
-.brand {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  margin-bottom: 6px;
-}
-
-.contact-info {
-  font-size: 0.85rem;
+  position: relative;
+  background-color: var(--bg-color);
   color: var(--text-color);
-  opacity: 0.8;
-  line-height: 1.3rem;
+  border-top: 1px solid var(--border-color);
 }
 
-.contact-info p {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #b48b6a; 
+  letter-spacing: 1px;
 }
 
-/* --- Middle Menu --- */
-.footer-menu {
-  display: grid;
-  gap: 1.2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.footer-menu a {
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #3b3b3b;
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  transition: opacity .3s;
+  transition: color 0.3s;
 }
 
-.footer-menu a:hover {
-  opacity: 0.6;
+.footer-links a:hover {
+  color: #b48b6a;
 }
 
-/* --- Right Zone: Social Icons --- */
-.footer-right a {
-  color: var(--text-color);
-  margin-left: 12px;
+.footer-copy {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+}
+
+.social-icons a {
   font-size: 1.2rem;
-  transition: opacity .3s, transform .2s;
+  margin-right: 12px;
+  color: #b48b6a;
+  transition: transform 0.3s, color 0.3s;
 }
 
-.footer-right a:hover {
-  opacity: .6;
-  transform: translateY(-1px);
+.social-icons a:hover {
+  color: #8f6b4a;
+  transform: scale(1.2);
 }
 
-/* --- Responsive Mobile --- */
-@media (max-width: 600px) {
-  .container-footer {
-    flex-direction: column;
-    gap: 6px;
-    text-align: center;
-  }
-
-  .footer-menu {
-    justify-content: center;
-  }
-
-  .footer-right {
-    margin-top: 4px;
-  }
+.admin-access {
+  position: absolute;
+  bottom: 10px;  /* proche du texte */
+  right: 10px;   /* discrète, coin inférieur droit */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  /* invisible */
+  opacity: 0;
 }
