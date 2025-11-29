@@ -3,10 +3,13 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 import { Livre } from '../model/livre.model';
 import { LivreCard } from "../livre-card/livre-card";
 import { BOOKS } from '../data/livre.data';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterLinkActive, LivreCard],
+  standalone :true ,
+  imports: [RouterLink, RouterLinkActive, LivreCard,CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

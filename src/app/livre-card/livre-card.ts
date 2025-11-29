@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Livre } from '../model/livre.model';
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-livre-card',
-  imports: [RouterLink],
+  imports: [RouterLink,FormsModule,CommonModule],
   standalone:true,
   templateUrl: './livre-card.html',
   styleUrl: './livre-card.css',
@@ -17,5 +18,6 @@ export class LivreCard {
   @Input() auteur!: string;
   @Input() imagesrc!: string;
   @Input() ref!: string;
+  @Input() disponible!: boolean;
 
 }

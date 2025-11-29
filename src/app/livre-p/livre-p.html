@@ -8,14 +8,6 @@
      (input)="applyFilters()">
   </div>
 
-  <!-- Filtres catégories -->
-  <!-- <div class="categories">
-    <button class="cat-btn active">Tous</button>
-    <button class="cat-btn">Roman</button>
-    <button class="cat-btn">Science</button>
-    <button class="cat-btn">Histoire</button>
-    <button class="cat-btn">Enfants</button>
-  </div> -->
   <div class="categories">
     <button class="cat-btn"
             *ngFor="let cat of categories"
@@ -37,7 +29,8 @@
         [cat]="livre.categorie"
         [description]="livre.description"
         [imagesrc]="livre.imagesrc"
-        [ref]="livre.ref">
+        [ref]="livre.ref"
+        [disponible]="livre.disponible">
       </app-livre-card>
     </div>
   </div>

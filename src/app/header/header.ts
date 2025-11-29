@@ -8,9 +8,34 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.css',
 })
 export class Header {
+  isDarkMode = false;
+
+  constructor() {
+    this.initializeTheme();
+  }
+
+  initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      this.isDarkMode = savedTheme === 'dark';
+    } else {
+      this.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    this.applyTheme();
+  }
 
   toggleTheme() {
-    document.body.classList.toggle('dark-theme');
+    this.isDarkMode = !this.isDarkMode;
+    this.applyTheme();
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  applyTheme() {
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
   }
 
 }
