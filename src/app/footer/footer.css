@@ -8,7 +8,7 @@
 .footer-title {
   font-weight: 700;
   margin-bottom: 15px;
-  color: #b48b6a; 
+  color: var(--primary-color);
   letter-spacing: 1px;
 }
 
@@ -22,36 +22,38 @@
 }
 
 .footer-links a {
-  color: #3b3b3b;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #b48b6a;
+  color: var(--link-hover-color);
 }
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #6b6b6b;
+  color: var(--muted-text-color);
 }
 
 .social-icons a {
   font-size: 1.2rem;
   margin-right: 12px;
-  color: #b48b6a;
+  color: var(--primary-color);
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #8f6b4a;
+  color: var(--link-hover-color);
   transform: scale(1.2);
 }
 
 .admin-access {
   position: absolute;
-  bottom: 10px;  /* proche du texte */
-  right: 10px;   /* discrète, coin inférieur droit */
+  bottom: 10px;
+  /* proche du texte */
+  right: 10px;
+  /* discrète, coin inférieur droit */
   width: 20px;
   height: 20px;
   cursor: pointer;

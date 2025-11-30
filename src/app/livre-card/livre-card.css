@@ -2,7 +2,7 @@
   border-radius: 12px;
   overflow: hidden;
   background: var(--card-bg);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
 .livre-img {
@@ -21,30 +21,32 @@
 .card-title {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #4a3f35;
+  color: var(--card-title-color);
 }
 
 /* Textes */
 .card-text {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--card-text-color);
 }
 
 /* Référence */
 .list-group-item {
-  background-color: #fafafa;
+  background-color: var(--list-group-bg);
   font-size: 0.9rem;
+  color: var(--text-color);
 }
 
 /* Lien "en savoir plus" */
 .card-link {
-  color: #b48b6a;
+  color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
 }
 
 .card-link:hover {
   text-decoration: underline;
+  color: var(--link-hover-color);
 }
 
 .titre-status {

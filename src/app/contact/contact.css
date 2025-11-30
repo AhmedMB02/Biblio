@@ -1,87 +1,73 @@
-.contact-container {
-    width: 100%;
-    max-width: 500px;
-    background: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px var(--card-shadow);
-    transition: background .4s, box-shadow 0.3s ease, transform 0.3s ease;
-    border: 1px solid var(--border-color);
+.contact-wrapper {
+  min-height: 75vh;
 }
 
-.contact-container:hover {
-    transform: translateY(-3px);
+/* Card */
+.contact-card {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 18px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  transition: background 0.4s, color 0.4s, border 0.4s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Titre */
-.contact-container h2 {
-    text-align: center;
-    color: var(--text-color);
-    margin-bottom: 30px;
-    font-size: 2em;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
+/* Title */
+.title {
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* Input group */
+.input-group-text {
+  background: var(--primary-color);
+  color: white;
+  border: none;
 }
 
-/* Labels */
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-color);
-    font-weight: 600;
+input, textarea {
+  background: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
-/* Champs de saisie */
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(180, 139, 106, 0.5);
 }
 
-/* Placeholder */
-input::placeholder, textarea::placeholder {
-    color: var(--placeholder-color);
-}
-
-/* Focus */
-input:focus,
-textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--primary-color);
-    outline: none;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-/* Bouton */
+/* Submit button */
 .submit-btn {
-    background-color: var(--primary-color);
-    color: white; 
-    padding: 15px 25px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s ease;
 }
 
 .submit-btn:hover {
-    /* Assombrir légèrement la couleur primaire */
-    filter: brightness(0.9); 
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(180, 139, 106, 0.4);
 }
+
+/* Cancel button */
+.cancel-btn {
+  background: var(--border-color);
+  color: var(--text-color);
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  opacity: 0.9;
+  filter: brightness(1.2);
+}
+
+/* Dark mode handled via :root / .dark-theme */

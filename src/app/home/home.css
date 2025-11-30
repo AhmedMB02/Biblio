@@ -14,10 +14,11 @@
   color: var(--text-color);
   letter-spacing: 1px;
 }
-.hero p{
-    font-style: italic;
-    font-weight: bold;
-    color: crimson;
+
+.hero p {
+  font-style: italic;
+  font-weight: bold;
+  color: crimson;
 }
 
 .hero .btn-primary {
@@ -33,16 +34,22 @@
 /*-----------------Section about--------------- */
 
 .about {
-    padding: 60px 60px;
-}
-.about h1{
-    color: #b48b6a;
-    padding-bottom: 40px;
+  padding: 60px 60px;
+  background-color: var(--accueil-bg);
+  border-radius: 15px;
+  transition: background 0.4s, color 0.4s;
+  margin-top: 40px;
 }
 
-.about p{
+.about h1 {
+  color: var(--primary-color);
+  padding-bottom: 40px;
+}
+
+.about p {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
+  color: var(--text-color);
 }
 
 .about-img {
@@ -50,6 +57,7 @@
   border-radius: 8px;
   object-fit: cover;
 }
+
 @media (max-width: 768px) {
   .about-img {
     margin: 20px auto;
@@ -59,74 +67,32 @@
 
 /*-----------------Section service--------------- */
 .services h1 {
-  color: #b48b6a;
+  color: var(--primary-color);
   padding-bottom: 40px;
 }
 
 .service-card {
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.service-card .card-title {
+  color: var(--card-title-color);
+}
+
+.service-card .card-text {
+  color: var(--muted-text-color);
+}
 
 .service-card img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-/*-----------------Section accueil--------------- */
-.accueil {
-  border-radius: 15px;
-  margin-top: 40px;
-  background-color: lightblue;
-  padding: 40px 20px;
-}
-.accueil h1{
-  color: #b48b6a;
-  padding-bottom: 40px;
-}
-.about-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
-}
-
-/* Texte */
-.horaire h5 {
-  color: #b48b6a;
-  margin-bottom: 10px;
-}
-
-.horaire p {
-  font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 6px;
-}
-
-.section-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.btn-see-more {
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 600;
-  transition: color .3s;
-}
-
-.btn-see-more:hover {
-  color: #a77a57;
-}
-
-.home-section {
-  margin-top: 30px;
 }
 
 /*---------------les livres---------------*/
@@ -135,13 +101,13 @@
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: var(--card-bg);
 }
 
 /* Effet de survol (Hover) optionnel */
 .book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; 
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 /* Styles pour l'image du livre */
@@ -159,14 +125,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0.5rem;
+  color: var(--card-title-color);
 }
 
 /* Styles pour la description */
 .book-desc {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: var(--muted-text-color);
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -174,8 +142,8 @@
 /* Si vous utilisez <button class="btn btn-primary">Voir plus</button> */
 .btn-primary {
   /* Couleur primaire personnalisée (si vous voulez dévier du bleu Bootstrap) */
-   background-color: #000000; 
-   border-color: #000000; 
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   border-radius: 8px;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
@@ -187,11 +155,48 @@
 .services .nav-link {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #000000 !important; /* Couleur d'accentuation */
+  color: var(--link-color) !important;
+  /* Couleur d'accentuation */
   transition: color 0.3s;
 }
 
 .services .nav-link:hover {
-  color: #000000 !important;
+  color: var(--link-hover-color) !important;
   text-decoration: underline;
+}
+
+
+/*-----------------Section accueil--------------- */
+.accueil {
+  border-radius: 15px;
+  margin-top: 40px;
+  background-color: var(--accueil-bg);
+  padding: 40px 20px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.accueil h1 {
+  color: var(--accueil-title-color);
+  padding-bottom: 40px;
+  transition: color 0.4s;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.horaire h5 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  transition: color 0.4s;
+}
+
+.horaire p {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 6px;
+  color: var(--text-color);
+  transition: color 0.4s;
 }

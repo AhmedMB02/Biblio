@@ -1,5 +1,5 @@
-<section class="hero d-flex align-items-center">
-  <div class="container text-center">
+<section class="hero container d-flex align-items-center">
+  <div class="text-center">
     <h1 class="display-4 fw-bold">Bienvenue à Notre Bibliothèque</h1>
     <p class="lead mt-3">
       Explorez des milliers de livres, articles et ressources numériques.
@@ -8,15 +8,19 @@
   </div>
 </section>
 
-<section class="about d-grid align-items-center">
+<section class="about container d-grid align-items-center">
   <h1 class="text-center mb-4">À propos</h1>
   <div class="d-flex justify-content-between align-items-center">
     <div class="horaire col-md-5 text-start">
       <p>
-        Notre bibliothèque a pour mission de rendre la connaissance accessible à tous, dans un espace accueillant et moderne.
-        Elle met à disposition un large choix de livres, de ressources numériques et de services adaptés à chaque public.
-        Que vous soyez lecteur passionné, étudiant, professionnel ou enfant en quête de découverte, notre équipe vous accompagne
-        pour trouver les informations et les outils dont vous avez besoin. La bibliothèque s’engage à promouvoir la culture,
+        Notre bibliothèque a pour mission de rendre la connaissance accessible à tous, dans un espace accueillant et
+        moderne.
+        Elle met à disposition un large choix de livres, de ressources numériques et de services adaptés à chaque
+        public.
+        Que vous soyez lecteur passionné, étudiant, professionnel ou enfant en quête de découverte, notre équipe vous
+        accompagne
+        pour trouver les informations et les outils dont vous avez besoin. La bibliothèque s’engage à promouvoir la
+        culture,
         l’apprentissage continu et le plaisir de lire au cœur de la communauté.
       </p>
     </div>
@@ -30,8 +34,7 @@
 <section class="services container py-5">
   <h1 class="text-center mb-4">Derniers livres ajoutés</h1>
   <div class="row g-4">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3"
-         *ngFor="let livre of randomBooks">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let livre of randomBooks">
 
       <div class="book-card h-100 shadow-sm">
         <img [src]="livre.imagesrc" class="book-img">
@@ -60,7 +63,7 @@
           <p class="card-text">Notre service au lecteur offre un accompagnement personnalisé pour faciliter
             l’accès aux ressources de la bibliothèque. Nous aidons les utilisateurs à trouver rapidement les
             livres, documents ou informations dont ils ont besoin, tout en proposant des conseils de lecture
-             adaptés à leurs centres d’intérêt.</p>
+            adaptés à leurs centres d’intérêt.</p>
         </div>
       </div>
     </div>
@@ -71,9 +74,9 @@
         <div class="card-body">
           <h3 class="card-title">Service aux professionnels</h3>
           <p class="card-text">Notre service pour les professionnels met à disposition des ressources
-             spécialisées, un accès renforcé à la documentation et des outils de recherche avancés.
-             Il accompagne les enseignants, chercheurs et entreprises dans leurs projets en facilitant
-             l’accès à des informations fiables et adaptées à leurs besoins.</p>
+            spécialisées, un accès renforcé à la documentation et des outils de recherche avancés.
+            Il accompagne les enseignants, chercheurs et entreprises dans leurs projets en facilitant
+            l’accès à des informations fiables et adaptées à leurs besoins.</p>
         </div>
       </div>
     </div>
@@ -113,4 +116,3 @@
 
   </div>
 </section>
-
