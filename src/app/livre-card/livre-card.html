@@ -25,9 +25,7 @@
     <div class="titre-status">
       <h5 class="card-title">{{ titre }}</h5>
 
-      <span
-        class="livre-status-point"
-        [ngClass]="disponible ? 'dispo' : 'non-dispo'">
+      <span class="livre-status-point" [ngClass]="disponible ? 'dispo' : 'non-dispo'">
       </span>
     </div>
 
@@ -41,6 +39,6 @@
   </ul>
 
   <div class="card-body text-center">
-    <a href="#" class="card-link" routerLink="/livre-details">En savoir plus</a>
+    <a href="#" class="card-link" [routerLink]="['/livre-details', ref]">En savoir plus</a>
   </div>
 </div>

@@ -7,10 +7,10 @@
   width: 100%;
   max-width: 550px;
   border-radius: 18px;
-  background: var(--bg-color);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   transition: background 0.4s, color 0.4s, border 0.4s;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Title */
@@ -26,14 +26,16 @@
   border: none;
 }
 
-input, textarea {
+input,
+textarea {
   background: var(--input-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
   transition: background 0.4s, color 0.4s, border 0.4s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(180, 139, 106, 0.5);
 }

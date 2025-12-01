@@ -1,0 +1,39 @@
+<div class="container mt-5" *ngIf="livre; else notFound">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="livre.imagesrc" class="img-fluid rounded shadow" alt="{{ livre.titre }}">
+        </div>
+        <div class="col-md-8">
+            <h2 class="mb-3">{{ livre.titre }}</h2>
+            <h4 class="text-muted mb-3">{{ livre.auteur }}</h4>
+
+            <div class="mb-3">
+                <span class="badge bg-primary me-2">{{ livre.categorie }}</span>
+                <span class="badge" [ngClass]="livre.disponible ? 'bg-success' : 'bg-danger'">
+                    {{ livre.disponible ? 'Disponible' : 'Indisponible' }}
+                </span>
+            </div>
+
+            <p class="lead">{{ livre.description }}</p>
+
+            <hr>
+
+            <h5>Description détaillée</h5>
+            <p>{{ livre.descriptionLong }}</p>
+
+            <p class="text-muted"><small>Référence: {{ livre.ref }}</small></p>
+
+            <button class="btn btn-primary mt-3 me-2" (click)="onReserve()">Réserver</button>
+            <button class="btn btn-secondary mt-3" routerLink="/livres">Retour à la liste</button>
+
+        </div>
+    </div>
+</div>
+
+<ng-template #notFound>
+    <div class="container mt-5 text-center">
+        <h3>Livre non trouvé</h3>
+        <p>Désolé, nous n'avons pas pu trouver le livre que vous cherchez.</p>
+        <button class="btn btn-primary" routerLink="/livres">Retour à la liste</button>
+    </div>
+</ng-template>

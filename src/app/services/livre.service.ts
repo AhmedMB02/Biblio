@@ -7,10 +7,14 @@ import { Livre } from '../model/livre.model';
 })
 export class LivreService {
 
-  constructor() {}
+  constructor() { }
 
   getAllBooks(): Livre[] {
     return BOOKS;
+  }
+
+  getBookByRef(ref: string): Livre | undefined {
+    return BOOKS.find(book => book.ref === ref);
   }
 
 }
