@@ -13,28 +13,44 @@
   --primary-color: #d4a574;
   --border-color: #333;
 } */
- :root {
-  --bg-color: #f6efe7;        /* fond général clair */
-  --text-color: #3b3b3b;      /* texte principal */
-  --primary-color: #b48b6a;   /* doré principal */
-  --secondary-color: #a18664; /* accents secondaires */
-  --accent-color: #d4a574;    /* décorations légères */
-  --border-color: #d4c8bd;    /* bordures des cartes et inputs */
-  --input-bg: #ffffff;         /* fond des champs input/textarea */
-  --hover-color: #c89c6e;     /* hover sur boutons et liens */
+:root {
+  --bg-color: #f6efe7;
+  /* fond général clair */
+  --text-color: #3b3b3b;
+  /* texte principal */
+  --primary-color: #b48b6a;
+  /* doré principal */
+  --secondary-color: #a18664;
+  /* accents secondaires */
+  --accent-color: #d4a574;
+  /* décorations légères */
+  --border-color: #d4c8bd;
+  /* bordures des cartes et inputs */
+  --input-bg: #ffffff;
+  /* fond des champs input/textarea */
+  --hover-color: #c89c6e;
+  /* hover sur boutons et liens */
   --accueil-bg: lightblue;
 }
 
 .dark-theme {
-  --bg-color: #121212;        /* fond sombre */
-  --text-color: #e6e6e6;      /* texte clair */
-  --primary-color: #e0b564;   /* doré principal */
-  --secondary-color: #7a6a50; /* accent plus doux */
-  --accent-color: #b48b6a;    /* petits éléments décoratifs */
-  --border-color: #333;        /* bordures des cartes et inputs */
-  --input-bg: #1b1b1b;         /* fond des champs input/textarea */
-  --hover-color: #d4a574;      /* hover sur boutons et liens */
-  --accueil-bg: #1f2a38; 
+  --bg-color: #121212;
+  /* fond sombre */
+  --text-color: #e6e6e6;
+  /* texte clair */
+  --primary-color: #e0b564;
+  /* doré principal */
+  --secondary-color: #7a6a50;
+  /* accent plus doux */
+  --accent-color: #b48b6a;
+  /* petits éléments décoratifs */
+  --border-color: #333;
+  /* bordures des cartes et inputs */
+  --input-bg: #1b1b1b;
+  /* fond des champs input/textarea */
+  --hover-color: #d4a574;
+  /* hover sur boutons et liens */
+  --accueil-bg: #1f2a38;
 }
 
 

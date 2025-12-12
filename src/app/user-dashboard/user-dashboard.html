@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <h2>Mon Tableau de Bord</h2>
+    <div *ngIf="currentUser">
+        <p>Bienvenue, {{ currentUser.username }}</p>
+    </div>
+
+    <div *ngIf="myBooks.length > 0; else noBooks">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Ref</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of myBooks">
+                    <td>{{ book.titre }}</td>
+                    <td>{{ book.auteur }}</td>
+                    <td>{{ book.ref }}</td>
+                    <td>
+                        <span class="badge"
+                            [ngClass]="{'bg-success': getStatus(book) === 'Emprunté', 'bg-warning': getStatus(book) === 'Réservé'}">
+                            {{ getStatus(book) }}
+                        </span>
+                    </td>
+                    <td>
+                        <button *ngIf="canCancel(book)" class="btn btn-sm btn-danger" (click)="cancelReservation(book)">
+                            Annuler
+                        </button>
+                        <span *ngIf="!canCancel(book)" class="text-muted">-</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #noBooks>
+        <div class="alert alert-info">
+            Vous n'avez aucun livre emprunté ou réservé pour le moment.
+        </div>
+    </ng-template>
+</div>

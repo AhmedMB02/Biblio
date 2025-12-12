@@ -23,7 +23,9 @@
 
             <p class="text-muted"><small>Référence: {{ livre.ref }}</small></p>
 
-            <button class="btn btn-primary mt-3 me-2" (click)="onReserve()">Réserver</button>
+            <button class="btn btn-primary mt-3 me-2" (click)="onReserve()" [disabled]="!livre.disponible">
+                {{ livre.disponible ? 'Réserver' : 'Indisponible' }}
+            </button>
             <button class="btn btn-secondary mt-3" routerLink="/livres">Retour à la liste</button>
 
         </div>
@@ -37,3 +39,7 @@
         <button class="btn btn-primary" routerLink="/livres">Retour à la liste</button>
     </div>
 </ng-template>
+
+<!-- Modal de connexion - s'affiche uniquement si showLoginModal est true -->
+<app-login-modal *ngIf="showLoginModal" (closeModal)="closeLoginModal()" (loginSuccess)="onLoginSuccess()">
+</app-login-modal>

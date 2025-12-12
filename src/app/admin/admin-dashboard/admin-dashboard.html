@@ -1,1 +1,123 @@
-<p>admin-dashboard works!</p>
+<div class="admin-container d-flex">
+    <!-- Sidebar -->
+    <aside class="sidebar bg-dark text-white p-3">
+        <h3 class="mb-4">Admin Panel</h3>
+        <div class="nav flex-column">
+            <h2>Gestion des Livres</h2>
+            <button class="btn btn-primary" (click)="openAddForm()">
+                <i class="bi bi-plus-lg"></i> Ajouter un Livre
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content flex-grow-1 p-3">
+        <!-- Book List Table -->
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Ref</th>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Catégorie</th>
+                            <th>Status</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let book of books">
+                            <td>{{ book.ref }}</td>
+                            <td>{{ book.titre }}</td>
+                            <td>{{ book.auteur }}</td>
+                            <td><span class="badge bg-info text-dark">{{ book.categorie }}</span></td>
+                            <td>
+                                <span class="badge" [ngClass]="book.disponible ? 'bg-success' : 'bg-secondary'">
+                                    {{ book.disponible ? 'Disponible' : 'Indisponible' }}
+                                </span>
+                            </td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-primary me-2" (click)="openEditForm(book)">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" (click)="deleteBook(book.ref)">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Add/Edit Modal Overlay -->
+<div class="modal-overlay" *ngIf="showForm">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ isEditing ? 'Modifier le Livre' : 'Ajouter un Nouveau Livre' }}</h5>
+                <button type="button" class="btn-close" (click)="closeForm()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Référence (ISBN)</label>
+                            <input type="text" class="form-control" formControlName="ref" [readonly]="isEditing">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Titre</label>
+                            <input type="text" class="form-control" formControlName="titre">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Auteur</label>
+                            <input type="text" class="form-control" formControlName="auteur">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Catégorie</label>
+                            <select class="form-select" formControlName="categorie">
+                                <option value="Roman">Roman</option>
+                                <option value="Science">Science</option>
+                                <option value="Histoire">Histoire</option>
+                                <option value="Enfants">Enfants</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Image URL</label>
+                        <input type="text" class="form-control" formControlName="imagesrc" placeholder="https://...">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description Courte</label>
+                        <textarea class="form-control" rows="2" formControlName="description"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description Longue</label>
+                        <textarea class="form-control" rows="4" formControlName="descriptionLong"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="dispoCheck" formControlName="disponible">
+                        <label class="form-check-label" for="dispoCheck">Disponible</label>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" class="btn btn-secondary" (click)="closeForm()">Annuler</button>
+                        <button type="submit" class="btn btn-success" [disabled]="bookForm.invalid">
+                            {{ isEditing ? 'Mettre à jour' : 'Enregistrer' }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

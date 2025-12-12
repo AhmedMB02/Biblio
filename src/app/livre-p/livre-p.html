@@ -2,17 +2,13 @@
 
   <!-- Barre de recherche -->
   <div class="search-bar mb-3">
-    <input type="text"
-     placeholder="🔍 Rechercher un livre par nom..."
-     [(ngModel)]="searchTerm"
-     (input)="applyFilters()">
+    <input type="text" placeholder="🔍 Rechercher un livre par nom..." [(ngModel)]="searchTerm"
+      (input)="applyFilters()">
   </div>
 
   <div class="categories">
-    <button class="cat-btn"
-            *ngFor="let cat of categories"
-            [class.active]="selectedCategory === cat"
-            (click)="selectCategory(cat)">
+    <button class="cat-btn" *ngFor="let cat of categories" [class.active]="selectedCategory === cat"
+      (click)="selectCategory(cat)">
       {{ cat }}
     </button>
   </div>
@@ -20,16 +16,9 @@
 
 <div class="container py-4">
   <div class="row g-4">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3"
-      *ngFor="let livre of filteredBooks">
-      <app-livre-card
-        [titre]="livre.titre"
-        [auteur]="livre.auteur"
-        [cat]="livre.categorie"
-        [description]="livre.description"
-        [imagesrc]="livre.imagesrc"
-        [ref]="livre.ref"
-        [disponible]="livre.disponible">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let livre of filteredBooks">
+      <app-livre-card [titre]="livre.titre" [auteur]="livre.auteur" [cat]="livre.categorie"
+        [description]="livre.description" [imagesrc]="livre.imagesrc" [ref]="livre.ref" [disponible]="livre.disponible">
       </app-livre-card>
     </div>
   </div>

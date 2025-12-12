@@ -1,7 +1,7 @@
 import { Livre } from "../model/livre.model";
 
-export const BOOKS : Livre[] = [
-    {
+export const BOOKS: Livre[] = [
+  {
     ref: "9780143127796",
     titre: "Sapiens: A Brief History of Humankind",
     categorie: "Science",
@@ -200,5 +200,106 @@ export const BOOKS : Livre[] = [
     description: "Un voyage fantastique.",
     descriptionLong: "Max visite un monde imaginaire rempli de créatures sauvages.",
     disponible: false
+  },
+  {
+    ref: "9780143110438",
+    titre: "A Brief History of Time",
+    categorie: "Science",
+    auteur: "Stephen Hawking",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780143110438-L.jpg",
+    description: "Comprendre l’univers de manière simple.",
+    descriptionLong: "Hawking explore la relativité, les trous noirs et la nature du temps.",
+    disponible: true
+  },
+  {
+    ref: "9780679728757",
+    titre: "The Diary of a Young Girl",
+    categorie: "Histoire",
+    auteur: "Anne Frank",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780679728757-L.jpg",
+    description: "Le journal d’Anne Frank pendant la Seconde Guerre mondiale.",
+    descriptionLong: "Un témoignage bouleversant d’une jeune fille cachée pendant l’occupation.",
+    disponible: false
+  },
+  {
+    ref: "9780307387899",
+    titre: "The Gene: An Intimate History",
+    categorie: "Science",
+    auteur: "Siddhartha Mukherjee",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780307387899-L.jpg",
+    description: "L’histoire et la science derrière le gène.",
+    descriptionLong: "Une exploration complète de la génétique moderne.",
+    disponible: false
+  },
+  {
+    ref: "9780307277671",
+    titre: "The Kite Runner",
+    categorie: "Roman",
+    auteur: "Khaled Hosseini",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780307277671-L.jpg",
+    description: "Une amitié brisée sur fond d’histoire afghane.",
+    descriptionLong: "Le destin tragique d’Amir et Hassan dans un Afghanistan en guerre.",
+    disponible: true
+  },
+  {
+    ref: "9780545790352",
+    titre: "Harry Potter à l'École des Sorciers",
+    categorie: "Enfants",
+    auteur: "J. K. Rowling",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780545790352-L.jpg",
+    description: "Le début de la grande aventure de Harry Potter.",
+    descriptionLong: "Harry découvre le monde des sorciers et rejoint Poudlard.",
+    disponible: true
+  },
+  {
+    ref: "9783257228007",
+    titre: "Le Parfum",
+    categorie: "Roman",
+    auteur: "Patrick Süskind",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9783257228007-L.jpg",
+    description: "L’obsession d’un homme pour les odeurs.",
+    descriptionLong: "Jean-Baptiste Grenouille cherche à créer le parfum parfait.",
+    disponible: true
+  },
+  {
+    ref: "9780812973026",
+    titre: "Guns, Germs, and Steel",
+    categorie: "Histoire",
+    auteur: "Jared Diamond",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780812973026-L.jpg",
+    description: "Pourquoi certaines civilisations dominent le monde.",
+    descriptionLong: "Étude des facteurs qui ont influencé les trajectoires humaines.",
+    disponible: true
+  },
+  {
+    ref: "9781501124020",
+    titre: "Astrophysics for People in a Hurry",
+    categorie: "Science",
+    auteur: "Neil deGrasse Tyson",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9781501124020-L.jpg",
+    description: "L’astrophysique expliquée simplement.",
+    descriptionLong: "Résumé clair des phénomènes importants du cosmos.",
+    disponible: true
+  },
+  {
+    ref: "9782070461985",
+    titre: "L'Étranger",
+    categorie: "Roman",
+    auteur: "Albert Camus",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9782070461985-L.jpg",
+    description: "Un roman existentialiste incontournable.",
+    descriptionLong: "L’histoire de Meursault, un homme indifférent face au monde.",
+    disponible: false
+  },
+  {
+    ref: "9780553296983",
+    titre: "Dune",
+    categorie: "Roman",
+    auteur: "Frank Herbert",
+    imagesrc: "https://covers.openlibrary.org/b/isbn/9780553296983-L.jpg",
+    description: "Un classique de science-fiction.",
+    descriptionLong: "Paul Atreides doit survivre sur la planète désertique Arrakis.",
+    disponible: true
   }
+
 ];
