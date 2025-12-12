@@ -22,7 +22,15 @@ export class AuthService {
         return this.currentUserSubject.value;
     }
 
-    constructor(private router: Router) { }
+    constructor(private router: Router) {
+        // Initialize session from localStorage if present
+        const storedUser = localStorage.getItem('currentUser');
+        if (storedUser) {
+            const user: User = JSON.parse(storedUser);
+            this.currentUserSubject.next(user);
+            this.loggedIn.next(true);
+        }
+    }
 
     /**
      * Tente de connecter un utilisateur.
@@ -37,6 +45,7 @@ export class AuthService {
             const adminUser: User = { username: 'admin', role: 'admin' };
             this.currentUserSubject.next(adminUser);
             this.loggedIn.next(true);
+            localStorage.setItem('currentUser', JSON.stringify(adminUser));
             if (shouldNavigate) {
                 this.router.navigate(['/admin-dashboard']);
             }
@@ -45,10 +54,11 @@ export class AuthService {
 
         // Mock User Login
         // In a real app, this would check against a database
-        if (user === 'user' && pass === '1234') {
-            const normalUser: User = { username: 'user', role: 'user' };
+        if (user === 'ahmed' && pass === '1234') {
+            const normalUser: User = { username: 'ahmed', role: 'user' };
             this.currentUserSubject.next(normalUser);
             this.loggedIn.next(true);
+            localStorage.setItem('currentUser', JSON.stringify(normalUser));
             // Navigate to the user dashboard
             if (shouldNavigate) {
                 this.router.navigate(['/dashboard']);
@@ -65,6 +75,7 @@ export class AuthService {
     logout() {
         this.currentUserSubject.next(null);
         this.loggedIn.next(false);
+        localStorage.removeItem('currentUser');
         // Rediriger vers la page d'accueil après déconnexion
         this.router.navigate(['/']);
     }
