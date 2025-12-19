@@ -7,6 +7,9 @@
     --border-color: #dee2e6;
     --card-bg: #ffffff;
 
+    /* Global Font */
+    --font-main: "Open Sans", "Helvetica Neue", sans-serif;
+
     /* New variables */
     --input-bg: #ffffff;
     --input-border: #e0d5c2;
@@ -62,5 +65,6 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: var(--font-main);
     transition: background-color 0.3s, color 0.3s;
 }

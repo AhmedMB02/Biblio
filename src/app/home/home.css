@@ -18,7 +18,7 @@
 .hero p {
   font-style: italic;
   font-weight: bold;
-  color: crimson;
+  color: rgb(9, 26, 158);
 }
 
 .hero .btn-primary {
@@ -47,7 +47,6 @@
 }
 
 .about p {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   color: var(--text-color);
 }
@@ -150,6 +149,17 @@
   transition: background-color 0.3s ease;
 }
 
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
+  filter: brightness(0.9);
+  /* Slightly darker on interaction */
+}
+
 /* Si vous utilisez <button class="nav-link text-primary fw-bold">Voir plus</button> */
 /* Si vous préférez un lien simple (nav-link) */
 .services .nav-link {
@@ -195,7 +205,6 @@
 }
 
 .horaire p {
-  font-family: 'Times New Roman', Times, serif;
   margin-bottom: 6px;
   color: var(--text-color);
   transition: color 0.4s;
